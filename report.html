@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<div id="dashboard">
+<table id="patient">
+<tr>
+	<td>
+	<h1>John Smith</h1>
+	<h2>Diagnosis: AML</h2>
+	<h3>Next Appointment: March 14th, 2045</h3>
+</td>
+</tr>
+</table>
+	
+<table id="model">
+<tr>
+    <td class="words"><strong id="daysdiagnosis">115</strong><br />Days Since Diagnosis</td>
+    <td class="words">The patient is showing a pattern<br/>consistent with <strong data-tooltip="with a confidence of 0.98">Remission</strong><br />expected to last <strong>10 days</strong><br />
+		with an overall survival of <strong>forever</strong>.
+	</td>
+	<td class="words">
+		<strong><a href="http://www.diegocalderon.info" target="_blank" data-tooltip="Click for link to a popular AML support group">Support Group</a></strong><br /><br />
+		<strong><a href="http://scholar.google.com/scholar?q=acute+myeloid+leukaemia&btnG=&hl=en&as_sdt=0%2C5" target="_blank" data-tooltip="Check out the latest AML research.">Literature</a></strong>
+	</td>
+<tr>
+</table>
+
+<table id="overview">
+<tr>
+    <td><canvas id="Test1" height="200" width="250"></canvas></td>
+    <td><canvas id="Test2" height="200" width="250"></canvas></td>
+    <td><canvas id="Test3" height="200" width="250"></canvas></td>
+</tr>
+<table id="patientsharing">
+<tr>
+    <td><!-- <button>Share Test1</button> -->
+	
+	<div class="wrapper">
+	  <div class="tweet">
+	    <button><span class="icon-twitter"></span>Sure?</button>
+	  </div>
+	  <div class="cover">Share<br />Test 1<span class="icon-twitter"></span>
+	  </div>
+	</div>
+	
+	</td>
+	<td><!-- <button>Share Test2</button> -->
+	
+	<div class="wrapper">
+	  <div class="tweet">
+	    <button><span class="icon-twitter"></span>Sure?</button>
+	  </div>
+	  <div class="cover">Share<br />Test 2<span class="icon-twitter"></span>
+	  </div>
+	</div>
+	
+	</td>
+	<td><!-- <button>Share Test3</button> -->
+	
+	<div class="wrapper">
+	  <div class="tweet">
+	    <button><span class="icon-twitter"></span>Sure?</button>
+	  </div>
+	  <div class="cover">Share<br />Test 3<span class="icon-twitter"></span>
+	  </div>
+	</div>
+	
+	</td>
+</tr>
+</table>
+</table>
+<table id="footertable">
+	<tr>
+		<td><div id="footer">This dashboard was built at BMI hackathon 2014 by Diego Calderon</div></td>
+	</tr>
+</table>
+</div>
+</body>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="tests.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="style.css">

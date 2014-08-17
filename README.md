@@ -1,7 +1,7 @@
 # 2014 BMI Hackathon
 This dashboard is part of BMI's 2014 hackathon hosted in Monterrey. Part 1 of the challenge involved creating classifiers that could predict aspects of a patient's AML treatment such as likelihood of remission, remission duration, and overall survival. The prompt we were using for this portion of the hackathon is copied from Katie Planey's emails (with slight modifications) as follows:
 
-### II. Software Design:
+### Software Design
 Translating model results to patient and doctor Hackathon members that wish to focus more on software implementation will work to address aspects of engaging the actual patient with the research results from above.  They will create “dummy” results so that they can progress while students are still working on the predicting results from part I. 
 
 ##### We will focus on
@@ -45,7 +45,7 @@ Data visualizations online can sometimes be especially tricky, however I found [
 
 For the tooltips I borrowed code from [this](http://cbracco.me/a-simple-css-tooltip/) website.
 
-The second confirmation button was based on code from [this](http://www.sanwebe.com/2013/01/40-css-buttons-from-codepen) blog post.
+The confirmation button was based on code from [this](http://www.sanwebe.com/2013/01/40-css-buttons-from-codepen) blog post.
 
 ## Demo
-To see a live demo of this AML report simply download the demo.html and double click on the file in your downloads folder. It is totally self-contained (has the css and javascript code in the html file, which is not standard procedure) and should open automatically in your preferred browser.
+To see a live demo of this dashboard simply download the demo.html and double click on the file in your downloads folder. It is totally self-contained (has the css and javascript code in the html file, which is not standard procedure) and should open automatically in your preferred browser.

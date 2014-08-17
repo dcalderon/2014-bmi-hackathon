@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<div id="dashboard">
+<table id="patient">
+<tr>
+	<td>
+	<h1>John Smith</h1>
+	<h2>Diagnosis: AML</h2>
+	<h3>Next Appointment: March 14th, 2045</h3>
+</td>
+</tr>
+</table>
+	
+<table id="model">
+<tr>
+    <td class="words"><strong id="daysdiagnosis">115</strong><br />Days Since Diagnosis</td>
+    <td class="words">The patient is showing a pattern<br/>consistent with <strong data-tooltip="with a confidence of 0.98">Remission</strong><br />expected to last <strong>10 days</strong><br />
+		with an overall survival of <strong>forever</strong>.
+	</td>
+	<td class="words">
+		<strong><a href="http://www.diegocalderon.info" target="_blank" data-tooltip="Click for link to a popular AML support group">Support Group</a></strong><br /><br />
+		<strong><a href="http://scholar.google.com/scholar?q=acute+myeloid+leukaemia&btnG=&hl=en&as_sdt=0%2C5" target="_blank" data-tooltip="Check out the latest AML research.">Literature</a></strong>
+	</td>
+<tr>
+</table>
+
+<table id="overview">
+<tr>
+    <td><canvas id="Test1" height="200" width="250"></canvas></td>
+    <td><canvas id="Test2" height="200" width="250"></canvas></td>
+    <td><canvas id="Test3" height="200" width="250"></canvas></td>
+</tr>
+<table id="patientsharing">
+<tr>
+    <td><!-- <button>Share Test1</button> -->
+	
+	<div class="wrapper">
+	  <div class="tweet">
+	    <button><span class="icon-twitter"></span>Sure?</button>
+	  </div>
+	  <div class="cover">Share<br />Test 1<span class="icon-twitter"></span>
+	  </div>
+	</div>
+	
+	</td>
+	<td><!-- <button>Share Test2</button> -->
+	
+	<div class="wrapper">
+	  <div class="tweet">
+	    <button><span class="icon-twitter"></span>Sure?</button>
+	  </div>
+	  <div class="cover">Share<br />Test 2<span class="icon-twitter"></span>
+	  </div>
+	</div>
+	
+	</td>
+	<td><!-- <button>Share Test3</button> -->
+	
+	<div class="wrapper">
+	  <div class="tweet">
+	    <button><span class="icon-twitter"></span>Sure?</button>
+	  </div>
+	  <div class="cover">Share<br />Test 3<span class="icon-twitter"></span>
+	  </div>
+	</div>
+	
+	</td>
+</tr>
+</table>
+</table>
+<table id="footertable">
+	<tr>
+		<td><div id="footer">This dashboard was built at BMI hackathon 2014 by Diego Calderon</div></td>
+	</tr>
+</table>
+</div>
+</body>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+// Tooltip code
+$('.cover').on('click', function(){
+  $(this).toggleClass('open');
+});
+
+// CHARTS!
+var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+var lineChartData = {
+	labels : ["January","February","March","April"],
+	datasets : [
+		{
+			label: "My First dataset",
+			fillColor : "rgba(220,220,220,0.2)",
+			strokeColor : "rgba(220,220,220,1)",
+			pointColor : "rgba(220,220,220,1)",
+			pointStrokeColor : "#fff",
+			pointHighlightFill : "#fff",
+			pointHighlightStroke : "rgba(220,220,220,1)",
+			data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+		},
+		{
+			label: "My Second dataset",
+			fillColor : "rgba(151,187,205,0.2)",
+			strokeColor : "rgba(151,187,205,1)",
+			pointColor : "rgba(151,187,205,1)",
+			pointStrokeColor : "#fff",
+			pointHighlightFill : "#fff",
+			pointHighlightStroke : "rgba(151,187,205,1)",
+			data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+		}
+	]
+
+}
+
+var radarChartData = {
+	labels: ["Variable1", "Variable2", "Variable3", "Variable4", "Variable5", "Variable6"],
+	datasets: [
+		{
+			label: "My First dataset",
+			fillColor: "rgba(220,220,220,0.2)",
+			strokeColor: "rgba(220,220,220,1)",
+			pointColor: "rgba(220,220,220,1)",
+			pointStrokeColor: "#fff",
+			pointHighlightFill: "#fff",
+			pointHighlightStroke: "rgba(220,220,220,1)",
+			data: [65,59,90,81,56,55]
+		},
+		{
+			label: "My Second dataset",
+			fillColor: "rgba(151,187,205,0.2)",
+			strokeColor: "rgba(151,187,205,1)",
+			pointColor: "rgba(151,187,205,1)",
+			pointStrokeColor: "#fff",
+			pointHighlightFill: "#fff",
+			pointHighlightStroke: "rgba(151,187,205,1)",
+			data: [28,48,40,19,96,27]
+		}
+	]
+};
+
+var barChartData = {
+	labels : ["January","February","March","April"],
+	datasets : [
+		{
+			fillColor : "rgba(220,220,220,0.5)",
+			strokeColor : "rgba(220,220,220,0.8)",
+			highlightFill: "rgba(220,220,220,0.75)",
+			highlightStroke: "rgba(220,220,220,1)",
+			data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+		},
+		{
+			fillColor : "rgba(151,187,205,0.5)",
+			strokeColor : "rgba(151,187,205,0.8)",
+			highlightFill : "rgba(151,187,205,0.75)",
+			highlightStroke : "rgba(151,187,205,1)",
+			data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+		}
+	]
+
+}
+
+// Load up charts onto page
+window.onload = function(){
+	var ctx = document.getElementById("Test1").getContext("2d");
+	window.myLine = new Chart(ctx).Line(lineChartData, {
+		responsive: false
+	});
+	window.myRadar = new Chart(document.getElementById("Test2").getContext("2d")).Radar(radarChartData, {
+		responsive: false
+	});
+	var ctx = document.getElementById("Test3").getContext("2d");
+	window.myBar = new Chart(ctx).Bar(barChartData, {
+		responsive : false
+	});
+}
+</script>

@@ -26,10 +26,26 @@ demo.html - Self-contained demo file. Basically the report.html file with the ja
 
 ## Design Decisions
 
+I stated in the prompt we did not want to clutter the report with unecessary information. The idea was to focus on the tests that conveyed the most relevant information. At the top of the report we have the patient's name, diagnosis, and next appointment, which quickly provides general context for what we are looking at.
 
+Below this title we have the main table with most of the information. In the top row from left to right we have a day count since diagnosis, the main details of the model and a link to a support group for AML (currently with a placeholder url) and a link to some recent literature on AML. On hover the bold details of the model provide a tooltip with model prediction confidence information attempting to add some background to classification claims.
+
+In the middle of the page we have a graphical representation of three different tests. These are also placeholders, but you can imagine them containing the most relevant information to keep track of AML progression. Like the model text above, when the cursor hovers over a data point more detailed information is displayed. Under each graph there is a button that gives the clinician the option of sharing the test with the patient, and we were careful to include a second confirmation to insure no accidental button presses.
+
+The color scheme of the display was chosen to provide a soothing background that doesn't confuse the interpretation of any of the info displays.
+
+While we only built a display for a clinician we had in mind the process of the physician building a relationship with their patient. Our sharing button mechanism was included as a way of empowering the patient with the ability to learn details about their AML care by way of requesting access from their doctor. The idea was that when the patient requests information on a test the clinician could share pieces of information they felt was relevant.
+
+In the future it would have been helpful to try and generalize this pattern for other chronic diseases and generalize the number of tests displayed. We would also like to have implemented a rudimentary permissions system for sharing test information. Another step would be to build an aggregate dashboard for a doctor who has many patients with different diagnosises. Looking at this dashboard the doctor could keep track of general trends in their patient's health.
 
 ## Technologies used
+We browsed many dashboards from various professions for inspiration. In particular I appreciated the simplicity of [this one](https://dribbble.com/shots/780188-Morning/attachments/78031).
 
-##
+Data visualizations online can sometimes be especially tricky, however I found [Chart.js](http://www.chartjs.org/) to be an awesome solution for our needs. Out of the box the 6 graph types were beautiful, responsive, and easy to understand.
 
-## To Do
+For the tooltips I borrowed code from [this](http://cbracco.me/a-simple-css-tooltip/) website.
+
+The second confirmation button was based on code from [this](http://www.sanwebe.com/2013/01/40-css-buttons-from-codepen) blog post.
+
+## Demo
+To see a live demo of this AML report simply download the demo.html and double click on the file in your downloads folder. It is totally self-contained (has the css and javascript code in the html file, which is not standard procedure) and should open automatically in your preferred browser.

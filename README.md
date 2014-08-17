@@ -28,7 +28,7 @@ demo.html - Self-contained demo file. Basically the report.html file with the ja
 
 As stated in the prompt we did not want to clutter the report with unecessary information. The idea was to focus on the tests that conveyed the most relevant information.
 
-![alt tag](http://Screenshot.png)
+![alt tag](https://raw.githubusercontent.com/dcalderon/2014-bmi-hackathon/master/Screenshot.png)
 
 At the top of the report we have the patient's name, diagnosis, and next appointment, which quickly provides general context for what we are looking at.
 

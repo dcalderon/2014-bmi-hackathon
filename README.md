@@ -28,6 +28,8 @@ demo.html - Self-contained demo file. Basically the report.html file with the ja
 
 As stated in the prompt we did not want to clutter the report with unecessary information. The idea was to focus on the tests that conveyed the most relevant information.
 
+![alt tag](http://Screenshot.png)
+
 At the top of the report we have the patient's name, diagnosis, and next appointment, which quickly provides general context for what we are looking at.
 
 Below this title we have the main table with most of the information. In the top row from left to right we have a day count since diagnosis, the main details of the model and a link to a support group for AML (currently with a placeholder url) and a link to some recent literature on AML. On hover the bold details of the model provide a tooltip with model prediction confidence information attempting to add some background to classification claims.
